@@ -1,0 +1,63 @@
+#Title{
+    color: whitesmoke;
+    font-size: 3em;
+    text-align: left;
+    margin-top: 20px;
+}
+#navigationBarListings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 5px;
+}
+#navigationBarListings button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+#navigationBarListings button:hover {
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+}
+/* CSS for the navigation bar and title */
+#navigationBarListings{
+    color: whitesmoke;
+}
+body{
+    background: gray;
+    background-image: linear-gradient(orange), darkgray;
+}
+
+#navigationBarListings a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+    #navigationBarListings a:hover {
+        color: black;
+        background-color: whitesmoke;
+    color: black;
+    background-color: whitesmoke;
+}
+#navigationBarListings a:visited {
+    color: whitesmoke;
+}
+#navigationBarListings a:active {
+    color: black;
+    background-color: whitesmoke;
+}
+button a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+button {
+    padding: 0;
+}
