@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css"/>
-    <title>FirstWebTest</title>
-</head>
+<title>TheClack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-    <nav>
-        <h1 id="Title">FirstWebTest</h1>
-        <div id="navigationBarSeparation">
-            <ul id="liTest1">
-                <li>
-                    <button id="liTest1Button">
-                        <a href="www.example.com" class="buttonLink">Portfolio</a>
-                    </button>
-                </li>
-                <li>
-                    <button id="liTest1Button2">
-                        <a href="www.example.com" class="buttonLink">Documentation</a>
-                    </button>
-                </li>
-                <li>
-                    <button id="liTest1Button3">
-                        <a href="www.example.com" class="buttonLink">About</a>
-                    </button>
-                </li>
-            </ul>
+    <main>
+        <style>
+            body {
+                background-image: linear-gradient(whitesmoke, gray);
+                font-family: Arial, sans-serif;
+            }
+        </style>
+
+        <div class="keyboardSection">
+        <h1>Testing</h1>
+        <p>Welcome to TheClack, a simple web application that allows you to do stuff with buttons.</p>
+        <button onclick="playSound('sound1')">Play Sound 1</button>
+        <button onclick="playSound('sound2')">Play Sound 2</button>
+        <button onclick="playSound('sound3')">Play Sound 3</button>
+        <script>
+            function playSound(sound) {
+                const audio = new Audio(`sounds/${sound}.mp3`);
+                audio.play().catch(error => {
+                    console.error('Error playing sound:', error);
+                });
+            }
+        </script>
+        <p>Click the buttons above to play different sounds. Make sure your device's volume is turned up!</p>
         </div>
-        <div id="navigationBarSearch">
-            <input type="text" id="searchInput" placeholder="Search..."/>
-            <button id="searchButton">Search</button>
-        </div>    
-    </nav> 
+
+        <div class="colorChangeSection">
+            <h2>Change Background Color</h2>
+            <button onclick="changeColor('red')">Red</button>
+            <button onclick="changeColor('green')">Green</button>
+            <button onclick="changeColor('blue')">Blue</button>
+            <button onclick="resetColor()">Reset Color</button>
+            <script>
+                function changeColor(color) {
+                    document.main.style.backgroundColor = color;
+                }
+                function resetColor() {
+                    document.main.style.backgroundColor = '';
+                    setInterval(0); // Reset interval to stop looping colors
+                }
+                function loopColor(){
+                    const colors = ['red', 'green', 'blue'];
+                    let index = 0;
+                    setInterval(() => {
+                        document.main.style.backgroundColor = colors[index];
+                        index = (index + 1) % colors.length;
+                    }, 1000);
+                }
+            </script>
+            <p>Click the buttons above to change the background color of the page.</p>
+        </div>>
+
+        <div class="footer">
+            <p>Made with ❤️ by TheClack Team</p>
+            <p>© 2023 TheClack. All rights reserved.</p>
+        </div>
+
+    </main>
+ 
 </body>
-</html>
+</html> 
